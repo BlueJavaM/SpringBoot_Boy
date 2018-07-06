@@ -4,8 +4,9 @@ import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
-/*
+/**
  *@Author: XieLiang
  *@Date : 2018/7/4
  *@Comment :
@@ -16,6 +17,7 @@ public class Boy {
     @GeneratedValue
     private Integer id;
     private String boyName;
+    @NotNull
     private int age;
     private String jjSize;
 
