@@ -27,16 +27,19 @@ public class BoyController {
     @Autowired
     private BoyUtil boyUtil;
 
+    /** 查询所有男生信息 */
     @GetMapping(value = "/boys")
     public List<Boy> findAllBoy(){
         return boyRepository.findAll();
     }
 
+    /** 根据ID查询男生信息 */
     @GetMapping(value = "/boys/{id}")
     public Boy findBoyByID(@PathVariable("id") Integer id){
         return boyRepository.findOne(id);
     }
 
+    /** 新增男生信息 */
     @PostMapping(value = "/boys")
     public Object addBoy(@Valid Boy boy, BindingResult bindingResult){
         //若不满足实体类Boy设置验证
@@ -46,6 +49,7 @@ public class BoyController {
         return boyUtil.success(boyRepository.save(boy));
     }
 
+    /** 修改男生信息 */
     @PutMapping(value = "/boys/{id}")
     public Boy updateBoy(@PathVariable("id") Integer id,
                          Boy boy){
@@ -56,16 +60,19 @@ public class BoyController {
         return  boyRepository.save(boy);
     }
 
+    /** 删除男生信息 */
     @DeleteMapping(value = "/boys/{id}")
     public void deleteBoy(@PathVariable("id") Integer id){
         boyRepository.delete(id);
     }
 
+    /** 根据JJSize查询男生信息 */
     @GetMapping(value = "/boys/size/{size}")
     public List<Boy> findBoyByJjSize(@PathVariable("size") String jjSize){
         return boyService.findBoyByJjSize(jjSize);
     }
 
+    /** 根据年龄男生信息 */
     @GetMapping(value = "/boys/getAge/{id}")
     public void getAge(@PathVariable("id") Integer id) throws Exception {
          boyService.getAge(id);
