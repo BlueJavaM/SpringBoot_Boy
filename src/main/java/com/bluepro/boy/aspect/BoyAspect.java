@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @Author: XieLiang
  * @Date : 2018/7/6
- * @Comment :
+ * @Comment :AOP — 面向切面编程，是一种编程思想
  */
 @Aspect
 @Component

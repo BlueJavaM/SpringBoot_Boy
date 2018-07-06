@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * @Author: XieLiang
  * @Date : 2018/7/6
- * @Comment :
+ * @Comment : 异常处理类，将捕获的异常统一处理
  */
 @ControllerAdvice
 /**用于拦截异常并统一处理

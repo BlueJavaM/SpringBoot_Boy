@@ -3,7 +3,7 @@ package com.bluepro.boy.exception;
 /**
  * @Author: XieLiang
  * @Date : 2018/7/6
- * @Comment :
+ * @Comment : 自定义异常类
  */
 
 public class BoyException extends RuntimeException {

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Author: XieLiang
  * @Date : 2018/7/6
- * @Comment :
+ * @Comment : 工具类，将相同代码统一管理
  */
 @Component
 public class BoyUtil {
